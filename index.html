@@ -7,36 +7,57 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Cabeçalho com título e texto abaixo -->
   <header>
     <h1>Bem-vindo à Learn Alone</h1>
-    <p>Aprenda de forma autônoma e prática. Explore as opções abaixo ou <a href="https://www.exemplo.com" target="_blank">visite o nosso site</a> para mais informações!</p>
+    <p>Aprenda de forma autônoma e prática. Explore as opções abaixo!</p>
   </header>
-
-  <!-- Menu Lateral Pequeno (Quadrado Verde) -->
-  <div class="menu-lateral">
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#sobre">Sobre</a></li>
-      <li><a href="#servicos">Serviços</a></li>
-      <li><a href="#contato">Contato</a></li>
-    </ul>
-  </div>
-
-  <!-- Conteúdo Principal -->
+  
   <main>
-    <button id="botao">Clique aqui</button>
-    <div id="opcoes" style="display: none; margin-top: 20px;">
-      <!-- As opções serão exibidas aqui -->
+    <!-- Menu Lateral -->
+    <div class="menu-lateral">
+      <ul>
+        <li><a href="#" id="Elementos">Elementos</a></li>
+        <li><a href="#" id="AdicionarDespesa">Adicionar Despesa</a></li>
+        <li><a href="#" id="Calculos">Cálculos</a></li>
+      </ul>
+    </div>
+    
+    <!-- Conteúdo Principal -->
+    <div class="conteudo-principal">
+      <div id="opcoes">
+        <p>Escolha uma opção do menu!</p>
+      </div>
     </div>
   </main>
 
-  <script src="script.js"></script>
+  <!-- Formulário de E-mail -->
+  <div class="email-form">
+    <label for="email">Digite seu e-mail:</label>
+    <input type="email" id="email" name="email" placeholder="exemplo@dominio.com" required>
+    <input type="submit" value="Enviar">
+  </div>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>© 2024 Learn Alone - Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    // Função para exibir conteúdo ao clicar nas opções do menu
+    document.getElementById("Elementos").addEventListener("click", function() {
+      document.getElementById("opcoes").style.display = "block";
+      document.getElementById("opcoes").innerHTML = "<h2>Elementos</h2><p>Detalhes sobre os Elementos...</p>";
+    });
+
+    document.getElementById("AdicionarDespesa").addEventListener("click", function() {
+      document.getElementById("opcoes").style.display = "block";
+      document.getElementById("opcoes").innerHTML = "<h2>Adicionar Despesa</h2><p>Aqui você pode adicionar suas despesas...</p>";
+    });
+
+    document.getElementById("Calculos").addEventListener("click", function() {
+      document.getElementById("opcoes").style.display = "block";
+      document.getElementById("opcoes").innerHTML = "<h2>Cálculos</h2><p>Realize cálculos aqui...</p>";
+    });
+  </script>
 </body>
 </html>
-
-
-
-
-
-  
